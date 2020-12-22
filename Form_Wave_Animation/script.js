@@ -9,3 +9,11 @@ labels.forEach(label => {
 })
 
 // add event when the text is clicked
+
+const spans = document.querySelectorAll('span')
+
+spans.forEach(span => {
+    span.addEventListener('click', event => {
+        event.target.parentNode.previousElementSibling.focus()
+    })
+})
