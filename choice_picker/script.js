@@ -9,7 +9,7 @@ textarea.addEventListener('keyup', (e) => {
     if(e.key === 'Enter') {
         setTimeout(() => {
             e.target.value = ''
-        }, 10)
+        }, 50)
         randomSelect()
     }
 })
