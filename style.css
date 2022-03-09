@@ -4,10 +4,13 @@ body {
     justify-content: center;
     flex-direction: column;
     font: 400 1.4rem/1.8rem sans-serif;
+    background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+
 }
 .project-title {
     font: 4rem/4.8rem sans-serif;
-    margin: 1rem;
+    margin: 2.5rem;
     color: rgb(53, 53, 53);
 }
 .grid {
@@ -18,26 +21,80 @@ body {
 }
 
 .grid .card {
+    background-color: #fff;
+    position: relative;
     box-shadow: 1px 1px 10px rgba(54, 54, 54, 0.5);
     border: none;
     border-radius: 1rem;
     overflow: hidden;
     text-decoration: none;
     color: rgb(78, 77, 77);
-    filter: brightness(0.9) blur(0.5px);
-    transition: all 0.2s;
+    transition: all 0.3s;
 }
+
+.grid .card img {
+    filter: brightness(0.5) blur(1px);
+    width: 100%;
+}
+
+.grid .card .title {
+    margin-left: 15px;
+}
+
+.grid .card .number {
+    z-index: 10;
+    position: absolute;
+    color: rgb(224, 224, 224);
+    width: 100%;
+    font: 4rem/4.8rem sans-serif;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.4s;
+}
+
 .grid .card:hover {
     filter: none;
     box-shadow: 3px 3px 15px rgba(54, 54, 54, 0.5);
     transform: translateY(-10px) scale(1.06);
-
 }
 
-.grid .card img{
-    width: 100%;
+.grid .card:hover img {
+    filter: none;
+}
+        
+
+.grid .card:hover .number {
+    color: transparent;
+}
+ 
+.grid .card .fa-circle-check {
+    position: absolute;
+    right: 5%;
+    top: 10%;
+    font-size: 2rem;
+    line-height: 2rem;
+    z-index: 100;
+    color: rgb(63, 207, 26);
+    display: none;
+}
+.grid .card .fa-circle-check.visited {
+    display: block;
 }
 
-.grid .card .title{
-    margin-left: 15px;
+.btn-clean-cookies {
+    background-color: rgb(226, 68, 68);
+    color: #fff;
+    border: 0;
+    padding: 1rem 2rem;
+    font: 2rem/2.4rem sans-serif;
+    margin: 5rem 0;
+    border-radius: 1rem;
+    transition: all 0.3s;
+}
+
+.btn-clean-cookies:hover {
+    background-color: rgb(182, 65, 65);
+    cursor: pointer;
 }
