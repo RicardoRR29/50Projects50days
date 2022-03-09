@@ -83,11 +83,13 @@ body {
     font-size: 2rem;
     line-height: 2rem;
     z-index: 100;
-    color: rgb(63, 207, 26);
-    display: none;
+    opacity: 0;
+    color: transparent;
+    transition: all 0.3s;
 }
 .grid .card .fa-circle-check.visited {
-    display: block;
+    color: rgb(63, 207, 26);
+    opacity: 1;
 }
 
 .btn-clean-cookies {

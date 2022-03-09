@@ -74,10 +74,10 @@ cards.forEach((card) => {
         addItem(card.querySelector('.number').innerText)
         console.log(e)
         if(e.target.localName == 'a') {
-            window.location.href = e.target.href
+            window.open(e.target.href, '_blank');
         } else {
             const card = e.target.offsetParent
-            window.location.href = card.href
+            window.open(card.href, '_blank');
         }
     })
 })
