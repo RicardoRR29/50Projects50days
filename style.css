@@ -1,0 +1,43 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    font: 400 1.4rem/1.8rem sans-serif;
+}
+.project-title {
+    font: 4rem/4.8rem sans-serif;
+    margin: 1rem;
+    color: rgb(53, 53, 53);
+}
+.grid {
+    width: 80%;
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.grid .card {
+    box-shadow: 1px 1px 10px rgba(54, 54, 54, 0.5);
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    text-decoration: none;
+    color: rgb(78, 77, 77);
+    filter: brightness(0.9) blur(0.5px);
+    transition: all 0.2s;
+}
+.grid .card:hover {
+    filter: none;
+    box-shadow: 3px 3px 15px rgba(54, 54, 54, 0.5);
+    transform: translateY(-10px) scale(1.06);
+
+}
+
+.grid .card img{
+    width: 100%;
+}
+
+.grid .card .title{
+    margin-left: 15px;
+}
