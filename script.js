@@ -52,6 +52,7 @@ cards.forEach((card) => {
 })
 
 function addItem(item) {
+    let href = ''
     if(lstProjects.indexOf(item) == -1) {
         const actualList = getCookie('lstProjectsCookie')
         if(lstProjects.length == 0) {
@@ -64,10 +65,19 @@ function addItem(item) {
         cards.forEach((card) => {
             if(card.querySelector('.number').innerText == item) {
                 card.querySelector('i').classList.add('visited')
-                window.open(card.href, '_blank');
+                href = card.href
+            }
+        })
+    } else {
+        cards.forEach((card) => {
+            if(card.querySelector('.number').innerText == item) {
+                card.querySelector('i').classList.add('visited')
+                href = card.href
             }
         })
     }
+    window.open(href, '_blank');
+
 }
 cards.forEach((card) => {
     card.addEventListener('click', (e) => {
