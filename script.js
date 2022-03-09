@@ -1,5 +1,3 @@
-// document.cookie = 'value' + '1' + '=' + '3'
-// document.cookie = '' + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
 const cards = document.querySelectorAll('.card')
 const lstProjectsCookie = getCookie('lstProjectsCookie')
 console.log(lstProjectsCookie, 'lstProjectsCookie')
@@ -74,5 +72,13 @@ cards.forEach((card) => {
     card.addEventListener('click', (e) => {
         e.preventDefault()
         addItem(card.querySelector('.number').innerText)
+        console.log(e)
+        if(e.target.localName == 'a') {
+            window.location.href = e.target.href
+        } else {
+            const card = e.target.offsetParent
+            window.location.href = card.href
+        }
+
     })
 })
