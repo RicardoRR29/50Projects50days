@@ -1,5 +1,6 @@
 // document.cookie = 'value' + '1' + '=' + '3'
 // document.cookie = '' + '=; Path=/; Expires=Thu, 01 Jan 1970 00:00:01 GMT;'
+const cards = document.querySelectorAll('.card')
 const lstProjectsCookie = getCookie('lstProjectsCookie')
 console.log(lstProjectsCookie, 'lstProjectsCookie')
 setCookie(lstProjectsCookie, lstProjectsCookie + '1', 365)
@@ -29,9 +30,15 @@ function getCookie(cname) {
 
 function deleteAllCookies() {
     setCookie('lstProjectsCookie', '', 0)
-    console.log(getCookie('lstProjectsCookie'))
+    removeChecks()
 }
-let cards = document.querySelectorAll('.card')
+
+function removeChecks() {
+    const iconsOfVisitedCards = document.querySelectorAll('.visited')
+    iconsOfVisitedCards.forEach((icon) => {
+        icon.classList.remove('visited')
+    })
+}
 
 if(lstProjectsCookie == '') {
     lstProjects = []
@@ -61,8 +68,6 @@ function addItem(item) {
                 card.querySelector('i').classList.add('visited')
             }
         })
-        console.log('lstProjects', lstProjects, 'cookie', getCookie('lstProjectsCookie'))
-        getCookie('lstProjectsCookie')
     }
 }
 cards.forEach((card) => {
