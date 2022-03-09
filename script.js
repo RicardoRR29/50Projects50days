@@ -64,6 +64,7 @@ function addItem(item) {
         cards.forEach((card) => {
             if(card.querySelector('.number').innerText == item) {
                 card.querySelector('i').classList.add('visited')
+                window.open(card.href, '_blank');
             }
         })
     }
@@ -72,12 +73,5 @@ cards.forEach((card) => {
     card.addEventListener('click', (e) => {
         e.preventDefault()
         addItem(card.querySelector('.number').innerText)
-        console.log(e)
-        if(e.target.localName == 'a') {
-            window.open(e.target.href, '_blank');
-        } else {
-            const card = e.target.offsetParent
-            window.open(card.href, '_blank');
-        }
     })
 })
