@@ -1,7 +1,6 @@
 const cards = document.querySelectorAll('.card')
 const lstProjectsCookie = getCookie('lstProjectsCookie')
 console.log(lstProjectsCookie, 'lstProjectsCookie')
-setCookie(lstProjectsCookie, lstProjectsCookie + '1', 365)
 
 
 function setCookie(cname, cvalue, exdays) {
@@ -27,6 +26,7 @@ function getCookie(cname) {
 }
 
 function deleteAllCookies() {
+    console.log(getCookie('lstProjectsCookie'))
     setCookie('lstProjectsCookie', '', 0)
     removeChecks()
 }
@@ -79,6 +79,5 @@ cards.forEach((card) => {
             const card = e.target.offsetParent
             window.location.href = card.href
         }
-
     })
 })
