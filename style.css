@@ -11,9 +11,10 @@ body {
     justify-content: center;
     flex-direction: column;
     font: 400 1.4rem/1.8rem sans-serif;
-    background-color: #8BC6EC;
-    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
-
+    /* background-color: #8BC6EC;
+    background-image: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%); */
+    background-color: #b8c6db;
+    background-image: linear-gradient(315deg, #b8c6db 0%, #f5f7fa 100%);
 }
 .project-title {
     font: 4rem/4.8rem sans-serif;
@@ -21,7 +22,8 @@ body {
     color: rgb(53, 53, 53);
 }
 .grid {
-    width: 80%;
+    width: 100%;
+    max-width: 800px;
     display: grid;
     gap: 40px;
     grid-template-columns: repeat(3, 1fr);
@@ -42,10 +44,11 @@ body {
 .grid .card img {
     filter: brightness(0.5) blur(1px);
     width: 100%;
+    height: 110px;
 }
 
 .grid .card .title {
-    margin-left: 15px;
+    margin: 0 15px;
 }
 
 .grid .card .number {
@@ -108,24 +111,25 @@ body {
     cursor: pointer;
 }
 
-@media (max-width: 800px) {
-    .grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-
-
 @media (max-width: 1080px) {
     html {
         font-size: 93.75%;
     }
-}
-
-@media (max-width: 720px) {
     html {
         font-size: 87.5%;
     }
+}
+
+
+
+@media (max-width: 800px) {
+    .grid {
+        padding: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 720px) {
 }
 @media (max-width: 500px) {
     html {
