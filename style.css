@@ -114,6 +114,12 @@ body {
     cursor: pointer;
 }
 
+#confetti-canvas {
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+
 @media (max-width: 1080px) {
     html {
         font-size: 87.5%;
