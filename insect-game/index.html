@@ -9,7 +9,7 @@
     <title></title>
 </head>
 <body>
-    <div class="screen up">
+    <div class="screen">
         <h1>Catch The Insect</h1>
         <button class="btn" id="start-btn">Play game</button>
     </div>
@@ -44,17 +44,13 @@
         </ul>
     </div>
 
-    <div class="screen game-container">
+    <div id="game-container" class="screen game-container">
         <h3 id="time" class="time">Time: 00:00</h3>
         <h3 id="score" class="score">Score: 0</h3>
-        <h5 id="message" class="message visible">
+        <h5 id="message" class="message">
             Are you annoyed yet? <br>
             You are playing an impossible game!!!
         </h5>
-
-        <div class="insect caught">
-            <img src="data:image/png;base64,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" alt="">
-        </div>
     </div>
     <script src="script.js"></script>
 </body>
