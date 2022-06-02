@@ -119,7 +119,8 @@ body {
         font-size: 87.5%;
     }
     .grid {
-        padding: 20px;
+        padding: 40px;
+        gap: 30px;
     }
 
 }
@@ -128,6 +129,7 @@ body {
 
 @media (max-width: 800px) {
     .grid {
+        gap: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
