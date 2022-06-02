@@ -30,6 +30,9 @@ body {
 }
 
 .grid .card {
+    margin: auto;
+    max-width: 300px;
+    width: 100%;
     background-color: #fff;
     position: relative;
     box-shadow: 1px 1px 10px rgba(54, 54, 54, 0.5);
@@ -113,25 +116,23 @@ body {
 
 @media (max-width: 1080px) {
     html {
-        font-size: 93.75%;
-    }
-    html {
         font-size: 87.5%;
     }
+    .grid {
+        padding: 20px;
+    }
+
 }
 
 
 
 @media (max-width: 800px) {
     .grid {
-        padding: 20px;
         grid-template-columns: repeat(2, 1fr);
     }
 }
 
-@media (max-width: 720px) {
-}
-@media (max-width: 500px) {
+@media (max-width: 600px) {
     html {
         font-size: 75%;
     }
